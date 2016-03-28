@@ -1,8 +1,8 @@
 {
   "name": "bootcss",
   "version": "0.0.0",
-  "description": "Normalize CSS with a good initial styling.",
-  "main": "index.js",
+  "description": "Bootstrap but only the CSS part.",
+  "main": "dist/bootcss.css",
   "scripts": {
     "test": "npm run build",
     "build": "rm -rf dist && gulp compress",
