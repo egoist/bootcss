@@ -13,18 +13,18 @@ gulp.task('serve', serve({
 gulp.task('build', function () {
   return gulp.src('src/bootcss.css')
     .pipe(postcss([
-			require('postcss-import')(),
-			require('postcss-cssnext')()
-		]))
+      require('postcss-import')(),
+      require('postcss-cssnext')()
+    ]))
     .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('compress', ['build'], function () {
   return gulp.src('./dist/bootcss.css')
-		.pipe(rename('bootcss.min.css'))
-		.pipe(sourcemaps.init())
+    .pipe(rename('bootcss.min.css'))
+    .pipe(sourcemaps.init())
     .pipe(nano())
-		.pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'))
 })
 
