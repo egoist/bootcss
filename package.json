@@ -1,5 +1,5 @@
 {
-  "name": "bootcss.css",
+  "name": "bootcss",
   "version": "0.0.0",
   "description": "Normalize CSS with a good initial styling.",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/egoist/bootcss.css.git"
+    "url": "git+https://github.com/egoist/bootcss.git"
   },
   "keywords": [
     "css",
@@ -19,9 +19,9 @@
   "author": "EGOIST <0x142857@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/egoist/bootcss.css/issues"
+    "url": "https://github.com/egoist/bootcss/issues"
   },
-  "homepage": "https://github.com/egoist/bootcss.css#readme",
+  "homepage": "https://github.com/egoist/bootcss#readme",
   "devDependencies": {
     "co": "^4.6.0",
     "gulp": "^3.9.1",
