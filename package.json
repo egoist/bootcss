@@ -1,0 +1,40 @@
+{
+  "name": "bootcss.css",
+  "version": "0.0.0",
+  "description": "Normalize CSS with a good initial styling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build",
+    "build": "rm -rf dist && gulp compress",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoist/bootcss.css.git"
+  },
+  "keywords": [
+    "css",
+    "normalize"
+  ],
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoist/bootcss.css/issues"
+  },
+  "homepage": "https://github.com/egoist/bootcss.css#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-serve": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss": "^5.0.19",
+    "postcss-cssnext": "^2.5.1",
+    "postcss-import": "^8.0.2"
+  },
+  "dependencies": {
+    "normalize.css": "^4.0.0"
+  }
+}
