@@ -6,9 +6,28 @@
 		<link rel="stylesheet" href="./dist/bootcss.css">
 		<style>
 			.main {
-				max-width: 600px;
+				max-width: 700px;
 				margin: 0 auto;
 				padding: 30px 0
+			}
+			[v-cloak] {
+				display: none;
+			}
+			h2 {
+				color: #999;
+				font-weight: 400;
+			}
+			.code-sample {
+				display: inline-block;
+				vertical-align: text-bottom;
+			}
+			[id$="-anchor"] {
+				margin-bottom: 10px;
+			}
+			hr {
+				border: none;
+				height: 1px;
+				background-color: #e2e2e2;
 			}
 		</style>
 	</head>
@@ -16,11 +35,30 @@
 		<div class="main">
 			<h1 class="site-name">BootCSS</h1>
 			<h2>
-				Bootstrap but only the CSS part.
+				>_ Bootstrap but only the CSS part.
 			</h2>
 			<hr>
-			<h3>button</h3>
-			<button class="btn">Default Button</button>
+			<h3 id="button-anchor">Button</h3>
+			<section class="content">
+				<div class="code-sample">
+					<button class="button button-large">Large Button</button>
+				</div>
+				<div class="code-sample">
+					<button class="button">Default Button</button>
+				</div>
+				<div class="code-sample">
+					<button class="button button-small">Small Button</button>
+				</div>
+				<div class="code-sample">
+					<button class="button button-mini">Mini Button</button>
+				</div>
+			</section>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.21/vue.min.js"></script>
+		<script>
+			new Vue({
+				el: 'body'
+			})
+		</script>
 	</body>
 </html>
