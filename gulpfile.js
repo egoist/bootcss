@@ -4,6 +4,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const nano = require('gulp-cssnano')
 const rename = require('gulp-rename')
 const serve = require('gulp-serve')
+const pug = require('gulp-pug')
 
 gulp.task('serve', serve({
   root: ['./'],
@@ -32,4 +33,4 @@ gulp.task('watch', function () {
   gulp.watch('./src/*.css', ['build'])
 })
 
-gulp.task('default', ['serve', 'build', 'watch'])
+gulp.task('default', ['serve', 'build', 'watch', 'demo'])

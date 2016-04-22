@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/egoist/bootcss#readme",
   "devDependencies": {
-    "co": "^4.6.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
     "gulp-postcss": "^6.1.0",
