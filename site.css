@@ -82,6 +82,11 @@ pre {
   padding-bottom: 10px;
 }
 
+.box-sub-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
 .element-inline {
   border: 1px solid #e2e2e2;
   padding: 10px;
