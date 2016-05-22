@@ -6,8 +6,12 @@
   "scripts": {
     "test": "npm run build",
     "build": "rm -rf dist && gulp compress",
-    "dev": "gulp"
+    "dev": "gulp",
+    "gh": "gh-pages -d public"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/egoist/bootcss.git"
@@ -23,17 +27,19 @@
   },
   "homepage": "https://github.com/egoist/bootcss#readme",
   "devDependencies": {
+    "color-preset": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-serve": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "normalize.css": "^4.1.1",
     "postcss": "^5.0.19",
     "postcss-cssnext": "^2.5.1",
-    "postcss-import": "^8.0.2"
+    "postcss-import": "^8.0.2",
+    "postcss-simple-vars": "^2.0.0",
+    "update-pkg": "^0.1.1"
   },
-  "dependencies": {
-    "normalize.css": "^4.0.0"
-  }
+  "size": "12KB"
 }

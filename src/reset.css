@@ -7,7 +7,9 @@ body, ul, h1, h2, h3, h4, h5 {
 }
 
 body {
-  font: 1rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button, input, textarea {
@@ -19,4 +21,12 @@ hr {
   background-color: #ccc;
   margin: 20px 0;
   border: none;
+}
+
+pre {
+  margin: 0;
+}
+
+pre > code {
+  font-size: 1rem;
 }

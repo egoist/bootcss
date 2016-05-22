@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  {{ nav('Components') }}
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/github.min.css">
+  {{ super() }}
+{% endblock %}
+
+{% block scripts %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+  {{ super() }}
+{% endblock %}
+
+{% block main %}
+  <div class="box">
+    {% include "partials/buttons.html" %}
+  </div>
+{% endblock %}

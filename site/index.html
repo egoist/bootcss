@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block nav %}
+  {{ nav('Home') }}
+{% endblock %}
+
+{% block main %}
+  <p>
+    While BootStrap is about 86KB large, the size of BootCSS will be smaller than half of it, {{ pkg.size }} currently (including normalize.css).
+  </p>
+
+  <p style="margin: 20px 0;">
+    <h4>Browser Support:</h4>
+    <ul style="padding-left: 22px;margin: 10px 0 0 0;">
+      <li>IE 9 and above</li>
+      <li>Chrome/Safari/FireFox/Android/iOS...</li>
+    </ul>
+  </p>
+
+  <p class="copyright">
+    Brought to you by <a href="https://github.com/egoist">EGOIST</a>, a lovely guy people love.
+  </p>
+{% endblock %}

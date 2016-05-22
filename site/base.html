@@ -1,0 +1,43 @@
+{% macro nav(tab) %}
+<nav class="nav">
+  <ul class="nav-list">
+    {% for nav in navs %}
+    <li class="nav-item">
+      <a href="{{ nav.path }}"{% if (nav.name == tab) %} class="active"{% endif %}>
+        {{ nav.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endmacro %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BootCSS</title>
+    {% block styles %}
+    <link rel="stylesheet" href="./bootcss.css">
+    <link rel="stylesheet" href="./site.css">
+    {% endblock %}
+  </head>
+  <body class="sans-serif">
+    <section class="brand">
+      <div class="container">
+        <h1 class="site-name">
+          {{ title }}
+        </h1>
+        {% block nav %}{% endblock %}
+      </div>
+    </section>
+    <section class="main">
+      <div class="container">
+        {% block main %}
+        {% endblock %}
+      </div>
+    </section>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
