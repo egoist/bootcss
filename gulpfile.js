@@ -37,15 +37,15 @@ gulp.task('html', function () {
       navs: [
         {
           name: 'Home',
-          path: '/'
+          path: './'
         },
         {
           name: 'Layout',
-          path: '/layout.html'
+          path: './layout.html'
         },
         {
           name: 'Components',
-          path: '/components.html'
+          path: './components.html'
         },
       ]
     }))
