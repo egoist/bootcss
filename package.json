@@ -7,7 +7,7 @@
     "test": "npm run build",
     "build": "rm -rf dist && gulp build",
     "dev": "gulp",
-    "gh": "gh-pages -d public"
+    "gh": "npm run build && gh-pages -d public"
   },
   "files": [
     "dist"
