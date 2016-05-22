@@ -62,16 +62,17 @@ gulp.task('css', function () {
   return gulp.src('src/bootcss.css')
     .pipe(postcss(plugins))
     .pipe(gulp.dest('dist'))
-    .pipe(gulp.dest('public'))
 })
 
 gulp.task('compress', ['css'], function () {
-  return gulp.src('./dist/bootcss.css')
-    .pipe(rename('bootcss.min.css'))
+  return gulp.src('./src/bootcss.css')
     .pipe(sourcemaps.init())
+    .pipe(postcss(plugins))
+    .pipe(rename('bootcss.min.css'))
     .pipe(nano())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('public'))
 })
 
 gulp.task('watch', function () {
