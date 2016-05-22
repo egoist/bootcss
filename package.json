@@ -5,7 +5,7 @@
   "main": "dist/bootcss.css",
   "scripts": {
     "test": "npm run build",
-    "build": "rm -rf dist && gulp compress",
+    "build": "rm -rf dist && gulp build",
     "dev": "gulp",
     "gh": "gh-pages -d public"
   },
