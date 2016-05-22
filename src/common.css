@@ -1,0 +1,36 @@
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inner {
+  padding: 10px;
+  &.2x {
+    padding: 20px;
+  }
+}
+
+.inner-vertical {
+  padding: 10px 0;
+  &.2x {
+    padding: 20px 0;
+  }
+}
+
+.inner-horizontal {
+  padding: 0 10px;
+  &.2x {
+    padding: 0 20px;
+  }
+}

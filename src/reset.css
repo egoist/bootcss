@@ -30,3 +30,9 @@ pre {
 pre > code {
   font-size: 1rem;
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}

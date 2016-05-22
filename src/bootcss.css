@@ -1,6 +1,8 @@
 @import "color-preset";
 @import "normalize.css/normalize.css";
+@import "./partials/vars.css";
 @import "./reset.css";
 @import "./font-family.css";
-@import "./forms.css";
+@import "./common.css";
+@import "./form.css";
 @import "./button.css";
