@@ -3,11 +3,11 @@
 </div>
 <div class="box-content">
   <div class="element-inline">
-    {% include "./button-1.html" %}
+    {% include "./button-all.html" %}
   </div>
   <div class="example-code">
     <pre><code class="language-html">{% filter trim %}
-      {% include "./button-1.html" %}
+      {% include "./button-all.html" %}
     {% endfilter %}</code></pre>
   </div>
   <div class="element-inline">
@@ -32,6 +32,18 @@
   <div class="example-code">
     <pre><code class="language-html">{% filter trim %}
       {% include "./button-mini.html" %}
+    {% endfilter %}</code></pre>
+  </div>
+
+  <div class="box-sub-title">
+    Button group
+  </div>
+  <div class="element-inline">
+    {% include "./button-group.html" %}
+  </div>
+  <div class="example-code">
+    <pre><code class="language-html">{% filter trim %}
+      {% include "./button-group.html" %}
     {% endfilter %}</code></pre>
   </div>
 </div>
