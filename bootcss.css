@@ -453,6 +453,7 @@ code, .code {
   outline: none;
   padding-right: 2.25rem;
   margin-bottom: 0;
+  background-color: #f9f9f9;
 }
 .select:after {
   position: absolute;
