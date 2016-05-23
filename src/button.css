@@ -1,6 +1,3 @@
-$button-color: $grey;
-$button-focus-color: $grey-700;
-
 @define-mixin button-type $normal-color, $active-color, $active-bg {
   color: white;
   background-color: $normal-color;
