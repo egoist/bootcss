@@ -7,7 +7,8 @@
     "test": "npm run build",
     "build": "rm -rf dist && gulp build",
     "dev": "gulp",
-    "gh": "npm run build && gh-pages -d public"
+    "gh": "npm run update:size && npm run build && gh-pages -d public",
+    "update:size": "node scripts/update-size"
   },
   "files": [
     "dist"
@@ -30,6 +31,7 @@
     "color-preset": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.1",
+    "gulp-nunjucks": "^2.2.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-serve": "^1.2.0",
