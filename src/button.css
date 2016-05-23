@@ -1,11 +1,30 @@
-.button {
+$button-color: $grey;
+$button-focus-color: $grey-700;
+
+@define-mixin button-type $normal-color, $active-color, $active-bg {
   color: white;
+  background-color: $normal-color;
+  border-color: $normal-color;
+  &:hover {
+    border-color: $active-color;
+    background-color: $active-color;
+  }
+  &.button-ghost {
+    background-color: white;
+    border-color: $normal-color;
+    color: $normal-color;
+    &:hover {
+      border-color: $active-color;
+      color: $active-color;
+      background-color: $active-bg;
+    }
+  }
+}
+
+.button {
   padding: 0;
-  background-color: white;
   user-select: none;
   border-radius: $border-radius;
-  border: none;
-  background-color: $blue;
   padding: .375rem 1rem;
   display: inline-block;
   font-size: 1rem;
@@ -14,8 +33,13 @@
   cursor: pointer;
   white-space: nowrap;
   appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-color: #ccc;
+  color: #555;
   &:hover {
-    background-color: $blue-600;
+    border-color: #adadad;
+    background-color: #e6e6e6;
   }
   &:active {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.19);
@@ -28,48 +52,46 @@
 }
 
 /* button size */
+@define-mixin button-size $padding, $font-size {
+  padding: $padding;
+  font-size: $font-size;
+}
+
 .button-large {
-  padding: .75rem 1.25rem;
-  font-size: 1.25rem;
+  @mixin button-size .75rem 1.25rem, 1.25rem;
 }
 
 .button-small {
-  padding: .25rem .75rem;
-  font-size: .85rem;
+  @mixin button-size .25rem .75rem, .85rem;
 }
 
 .button-mini {
-  padding: .1rem .45rem;
-  font-size: .6rem;
+  @mixin button-size .1rem .45rem, .6rem;
 }
 
 /* button types */
+.button-black {
+  @mixin button-type $grey-800, $grey-900, $grey-200;
+}
+
+.button-primary {
+  @mixin button-type $blue, $blue-600, $blue-50;
+}
+
 .button-success {
-  background-color: $green;
-  &:hover {
-    background-color: $green-600;
-  }
+  @mixin button-type $green, $green-600, $green-50;
 }
 
 .button-info {
-  background-color: $cyan;
-  &:hover {
-    background-color: $cyan-600;
-  }
+  @mixin button-type $cyan, $cyan-600, $cyan-50;
 }
 
 .button-danger {
-  background-color: $red-700;
-  &:hover {
-    background-color: $red-900;
-  }
+  @mixin button-type $red-700, $red-900, $red-50;
 }
 
 .button-warning {
-  background-color: $orange-700;
-  &:hover {
-    background-color: $orange-900;
-  }
+  @mixin button-type $orange-700, $orange-900, $orange-50;
 }
 
 /* button group */
@@ -77,12 +99,19 @@
   font-size: 0;
   & .button {
     border-radius: 0;
-    box-shadow:  0 1px 1px rgba(0, 0, 0, 0.22);
+    z-index: 1;
+    position: relative;
     &:first-child {
       border-radius: $border-radius 0 0 $border-radius;
     }
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
     &:last-child {
       border-radius: 0 $border-radius $border-radius 0;
+    }
+    &:hover {
+      z-index: 2;
     }
   }
 }

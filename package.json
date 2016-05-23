@@ -40,8 +40,9 @@
     "postcss": "^5.0.19",
     "postcss-cssnext": "^2.5.1",
     "postcss-import": "^8.0.2",
+    "postcss-mixins": "^4.0.1",
     "postcss-simple-vars": "^2.0.0",
     "update-pkg": "^0.1.1"
   },
-  "size": "5KB"
+  "size": "6KB"
 }
