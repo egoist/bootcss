@@ -4,10 +4,10 @@ const pkg = require('update-pkg')
 
 const data = pkg.data()
 
-const size = execSync('du -k "dist/bootcss.min.css" | cut -f1')
+const size = execSync('stat -f "%z" dist/bootcss.min.css')
   .toString()
   .trim()
 
-data.size = `${size}KB`
+data.size = `${Math.floor(size / 1024)}KB`
 
 pkg.update(data)

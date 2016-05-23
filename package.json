@@ -43,5 +43,5 @@
     "postcss-simple-vars": "^2.0.0",
     "update-pkg": "^0.1.1"
   },
-  "size": "12KB"
+  "size": "5KB"
 }
