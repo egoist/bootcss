@@ -91,6 +91,15 @@
   @mixin button-type $orange-700, $orange-900, $orange-50;
 }
 
+/* floating button */
+.button-floating {
+  box-shadow: $z-depth-1;
+  transition: background-color .3s ease, box-shadow .3s ease;
+  &:hover {
+    box-shadow: $z-depth-2;
+  }
+}
+
 /* button group */
 .button-group {
   font-size: 0;
