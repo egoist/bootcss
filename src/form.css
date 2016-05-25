@@ -1,7 +1,11 @@
 .form-group {
   display: block;
+  margin-bottom: 15px;
   & label {
     display: block;
+    &.form-radio {
+      display: inline-block;
+    }
     margin-bottom: 5px;
   }
 }
@@ -11,7 +15,6 @@
   border-radius: $border-radius;
   padding: .375rem .75rem;
   width: 100%;
-  margin-bottom: 15px;
   &:focus {
     border-color: #66afe9;
     box-shadow: 0 0 0 3px rgba(48,144,228,.1);
@@ -20,7 +23,6 @@
 
 .select {
   position: relative;
-  margin-bottom: 15px;
   & select {
     appearance: none;
     outline: none;
@@ -42,5 +44,61 @@
     border-right: .35rem solid transparent;
     border-bottom: .35rem solid transparent;
     border-left: .35rem solid transparent;
+  }
+}
+
+.form-icon {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  display: block;
+  position: absolute;
+  top: .25rem;
+  left: 0;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-checkbox,
+.form-radio {
+  position: relative;
+  padding-left: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+  & input {
+    display: none;
+    &:checked ~ .form-icon {
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.form-checkbox input {
+  &:checked ~ .form-icon {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+  }
+}
+
+.form-radio {
+  padding: 0 1.5rem;
+  & .form-icon {
+    border-radius: 50%;
+  }
+  & input:checked ~ .form-icon {
+    &:after {
+      content: '';
+      position: absolute;
+      height: .4rem;
+      width: .4rem;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: white;
+      border-radius: 50%;
+    }
   }
 }
