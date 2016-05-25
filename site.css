@@ -52,10 +52,14 @@ pre {
   left: 50%;
   -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-  bottom: 0
+  bottom: 0;
+  height: 40px;
+  text-align: center;
+  width: 100%
 }
 
 .nav .nav-list {
+  display: inline-block;
   list-style: none;
   padding-left: 0;
   overflow: hidden;
