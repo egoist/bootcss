@@ -2,7 +2,7 @@
   color: white;
   background-color: $normal-color;
   border-color: $normal-color;
-  &:hover {
+  &:hover, &.active {
     border-color: $active-color;
     background-color: $active-color;
   }
@@ -34,7 +34,7 @@
   border: 1px solid #ccc;
   border-color: #ccc;
   color: #555;
-  &:hover {
+  &:hover, &.active {
     border-color: #adadad;
     background-color: #e6e6e6;
   }
@@ -71,28 +71,28 @@
   @mixin button-type $grey-800, $grey-900, $grey-200;
 }
 
-.button-primary {
+.button.button-primary {
   @mixin button-type $blue, $blue-600, $blue-50;
 }
 
-.button-success {
+.button.button-success {
   @mixin button-type $green, $green-600, $green-50;
 }
 
-.button-info {
+.button.button-info {
   @mixin button-type $cyan, $cyan-600, $cyan-50;
 }
 
-.button-danger {
+.button.button-danger {
   @mixin button-type $red-700, $red-900, $red-50;
 }
 
-.button-warning {
+.button.button-warning {
   @mixin button-type $amber-700, $yellow-900, $yellow-50;
 }
 
 /* floating button */
-.button-floating {
+.button.button-floating {
   box-shadow: $z-depth-1;
   transition: background-color .3s ease, box-shadow .3s ease;
   &:hover {
@@ -116,7 +116,7 @@
     &:last-child {
       border-radius: 0 $border-radius $border-radius 0;
     }
-    &:hover {
+    &:hover, &.active {
       z-index: 2;
     }
   }
