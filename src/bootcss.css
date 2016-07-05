@@ -3,6 +3,7 @@
 @import "./partials/vars.css";
 @import "./reset.css";
 @import "./font-family.css";
+@import "./grid.css";
 @import "./common.css";
 @import "./form.css";
 @import "./button.css";
