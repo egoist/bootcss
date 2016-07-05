@@ -50,8 +50,9 @@ pre {
 .nav {
   position: absolute;
   left: 50%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: 0;
   height: 40px;
   text-align: center;
@@ -91,9 +92,15 @@ pre {
 }
 
 .box-sub-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #666;
   margin: 20px 0;
-  text-align: center;
+}
+
+.box-description {
+  color: #666;
+  font-size: .875rem;
+  margin-bottom: 10px;
 }
 
 .element-inline {
@@ -101,6 +108,7 @@ pre {
   margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.5;
+  overflow: auto;
 }
 
 .example-code {
@@ -111,4 +119,19 @@ pre {
 .example-code pre > code {
   font-size: 13px;
   padding: 20px;
+}
+
+.example-grid {
+}
+
+.example-grid .cell {
+  padding: 10px;
+}
+
+.example-grid .\-4of12 {
+  background-color: #e2e2e2;
+}
+
+.example-grid .\-8of12 {
+  background-color: #ccc;
 }
